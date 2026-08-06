@@ -108,11 +108,19 @@
             gap: 15px; /* تقليل المسافات بين الصور عشان الصور تاخد أكبر مساحة ممكنة */
         }
 
-        /* الكود ده عشان لو حد فتح من شاشة متوسطة زي التابلت يعرض صورتين جنب بعض */
-        @media (max-width: 1024px) {
+       @media (max-width: 1024px) {
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .contact-btn { width: 100%; justify-content: center; }
+            .portfolio-section { padding: 40px 10px; }
+            .grid-container { grid-template-columns: repeat(1, 1fr); }
+            .work-card { height: 350px; }
         }
 
         .work-card {
