@@ -104,8 +104,15 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr); /* هنا بنجبره يعرض 4 جنب بعض */
+            gap: 20px; /* قللنا المسافة شوية عشان الصور تاخد مساحتها بشكل مريح */
+        }
+
+        /* الكود ده عشان لو حد فتح من شاشة متوسطة زي التابلت يعرض صورتين جنب بعض */
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .work-card {
@@ -197,10 +204,12 @@
             60% { transform: translateY(-7px); }
         }
 
-        @media (max-width: 768px) {
+      @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             .hero h2 { font-size: 1.2rem; }
             .contact-btn { width: 100%; justify-content: center; }
+            /* السطر اللي هنضيفه للموبايل */
+            .grid-container { grid-template-columns: repeat(1, 1fr); }
         }
     </style>
 </head>
