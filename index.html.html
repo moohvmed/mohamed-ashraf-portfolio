@@ -78,9 +78,9 @@
         }
         .scroll-down:hover { color: var(--accent); }
 
-        .portfolio-section {
-            padding: 100px 10%;
-            max-width: 1400px;
+       .portfolio-section {
+            padding: 60px 2%; /* قللنا الهوامش الجانبية جداً من 10% إلى 2% */
+            max-width: 100%;  /* بيفرد الكروت بعرض الشاشة كلها */
             margin: 0 auto;
         }
 
@@ -103,9 +103,9 @@
         }
 
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* هنا بنجبره يعرض 4 جنب بعض */
-            gap: 20px; /* قللنا المسافة شوية عشان الصور تاخد مساحتها بشكل مريح */
+           display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px; /* تقليل المسافات بين الصور عشان الصور تاخد أكبر مساحة ممكنة */
         }
 
         /* الكود ده عشان لو حد فتح من شاشة متوسطة زي التابلت يعرض صورتين جنب بعض */
@@ -116,10 +116,10 @@
         }
 
         .work-card {
-            background-color: var(--bg-card);
+          background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            height: 320px;
+            height: 420px; /* زودنا الارتفاع شوية عشان أبعاد الصور تفضل مظبوطة ومتاكلش منها حاجة */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -130,7 +130,7 @@
             overflow: hidden;
             color: var(--text-muted);
         }
-
+        
         .work-card:hover {
             transform: translateY(-10px);
             border-color: #555;
